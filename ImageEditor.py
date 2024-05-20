@@ -13,72 +13,72 @@ app = QApplication([])
 win = QWidget()
 win.resize(2000, 1000)
 win.setStyleSheet("background-color : chartreuse")
-win.setWindowIcon(QtGui.QIcon('applogo(.ico)')) #app icon
+win.setWindowIcon(QtGui.QIcon('logomax3.png'))
 win.setWindowTitle('PhotoGraf')
-lb_image = QLabel("Image")
+lb_image = QLabel("Изображение")
 lb_image.setStyleSheet("background-color : ivory")
-btn_dir = QPushButton("Browse:")
+btn_dir = QPushButton("Выбор папки:")
 btn_dir.setStyleSheet("background-color : orange")
 lw_files = QListWidget()
 lw_files.setStyleSheet("background-color : white")
-btn_dir2 =  QPushButton('Exit')
-btn_dir2.setStyleSheet("background-color : red")
+btn_dir2 =  QPushButton('На сайт разработчика')
+btn_dir2.setStyleSheet("background-color : gold")
 
 
 
-btn_left = QPushButton("rotate")
+btn_left = QPushButton("Поворот")
 btn_left.setStyleSheet("background-color : green")
-btn_right = QPushButton("up/down")
+btn_right = QPushButton("Вверх/Вниз")
 btn_right.setStyleSheet("background-color : green")
-btn_flip = QPushButton("mirror")
+btn_flip = QPushButton("Зеркало")
 btn_flip.setStyleSheet("background-color : green")
-btn_sharp = QPushButton("blur")
+btn_sharp = QPushButton("Размытие")
 btn_sharp.setStyleSheet("background-color : green")
-btn_bw = QPushButton("bw")
+btn_bw = QPushButton("Чёрное и Белое")
 btn_bw.setStyleSheet("background-color : green")
-btn_save = QPushButton("save") #1
+btn_save = QPushButton("Сохранить") #1
 btn_save.setStyleSheet("background-color : yellow") #1
-btn_blue = QPushButton("contour") #2
+btn_blue = QPushButton("Контур") #2
 btn_blue.setStyleSheet("background-color : green") #2
-btn_rid = QPushButton("embossing") #3
+btn_rid = QPushButton("Тиснение") #3
 btn_rid.setStyleSheet("background-color : green") #3
-btn_fgd = QPushButton("details") #4
+btn_fgd = QPushButton("Детализация") #4
 btn_fgd.setStyleSheet("background-color : green") #4
-btn_hjk = QPushButton("smoothing") #5
+btn_hjk = QPushButton("Сглаживание") #5
 btn_hjk.setStyleSheet("background-color : green") #5
-btn_poi = QPushButton("clarity of boundaries") #6
+btn_poi = QPushButton("Чёткость границ") #6
 btn_poi.setStyleSheet("background-color : green") #6
-btn_lkj = QPushButton("boundaries")
+btn_lkj = QPushButton("Границы")
 btn_lkj.setStyleSheet("background-color : green")
-btn_tuy = QPushButton("sharp")
+btn_tuy = QPushButton("Резкость")
 btn_tuy.setStyleSheet("background-color : green")
-btn_sdf = QPushButton("boundaries(+)")
+btn_sdf = QPushButton("Границы(+)")
 btn_sdf.setStyleSheet("background-color : green")
-btn_rty = QPushButton("[ + ] crop center (1)") #btn_rty - btn_zo (image crop functions)
+btn_rty = QPushButton("[ + ] обрезка по центру (1)")
 btn_rty.setStyleSheet("background-color : Khaki")
-btn_rty2 = QPushButton("[+] crop center (2)")
+btn_rty2 = QPushButton("[+] обрезка по центру (2)")#!---------------------------------()
 btn_rty2.setStyleSheet("background-color : Khaki")
-btn_ty = QPushButton("[  '] right up (1)")
+btn_ty = QPushButton("[  '] обрезка по правому верхнему углу (1)")
 btn_ty.setStyleSheet("background-color : Khaki")
-btn_ty2 = QPushButton("['] right up (2)")
+btn_ty2 = QPushButton("['] обрезка по правому верхнему углу (2)")#!--------------------------()
 btn_ty2.setStyleSheet("background-color : Khaki")
-btn_po = QPushButton("[ .] right lower (1)")
+btn_po = QPushButton("[ .] обрезка по правому нижнему углу (1)")
 btn_po.setStyleSheet("background-color : Khaki")
-btn_po2 = QPushButton("[.] right lower (2)")
+btn_po2 = QPushButton("[.] обрезка по правому нижнему углу (2)")#!-----------------------------()
 btn_po2.setStyleSheet("background-color : Khaki")
-btn_op = QPushButton("[: :] edges (1)")
+btn_op = QPushButton("[: :] обрезка по краям (1)")
 btn_op.setStyleSheet("background-color : Khaki")
-btn_op2 = QPushButton("[::] edges (2)")
+btn_op2 = QPushButton("[::] обрезка по краям (2)")#!------------------------------------()
 btn_op2.setStyleSheet("background-color : Khaki")
-btn_gh = QPushButton("[' ] left up (1)")
+btn_gh = QPushButton("[' ] обрезка по левому верхнему углу (1)")
 btn_gh.setStyleSheet("background-color : Khaki")
-btn_gh2 = QPushButton("['] left up (2)")
+btn_gh2 = QPushButton("['] обрезка по левому верхнему углу (2)")#!------------------------------------()
 btn_gh2.setStyleSheet("background-color : Khaki")
-btn_jo = QPushButton("[. ] left lower (1)")
+btn_jo = QPushButton("[. ] обрезка по левому нижнему углу (1)")
 btn_jo.setStyleSheet("background-color : Khaki")
-btn_jo2 = QPushButton("[.] left lower (2)")
+btn_jo2 = QPushButton("[.] обрезка по левому нижнему углу (2)")#!--------------------------------()
 btn_jo2.setStyleSheet("background-color : Khaki")
-btn_zo = QPushButton("[ { } ] zoom")
+btn_zo = QPushButton("[ { } ] приближение(zoom)")
 btn_zo.setStyleSheet("background-color : Khaki")
 
 row = QHBoxLayout()          
@@ -202,7 +202,7 @@ class ImageProcessor():
        )
        self.showImage(image_path)
 
-   def do_right(self): 
+   def do_right(self): #Вверх/Вниз
        self.image = self.image.transpose(Image.ROTATE_180)
        self.saveImage()
        image_path = os.path.join(
@@ -210,16 +210,13 @@ class ImageProcessor():
        )
        self.showImage(image_path)
 
-   def do_left(self):
+   def do_left(self): #Поворот
        self.image = self.image.transpose(Image.ROTATE_270)
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
        )
        self.showImage(image_path)
-
-  def close_window():
-    app.quit()
 
    def do_Cont(self):
        self.image = self.image.filter(ImageFilter.CONTOUR)
@@ -287,7 +284,7 @@ class ImageProcessor():
 
 
    def crop_center(self):
-       self.image = self.image.crop((400, 0, 900, 500)) 
+       self.image = self.image.crop((400, 0, 900, 500)) #complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename       
@@ -295,7 +292,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_right(self):
-       self.image = self.image.crop((800, -300, 1250, 500))
+       self.image = self.image.crop((800, -300, 1250, 500)) #complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -303,7 +300,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_right2(self):
-       self.image = self.image.crop((800, 300, 1300, 750)) 
+       self.image = self.image.crop((800, 300, 1300, 750)) #complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -311,7 +308,7 @@ class ImageProcessor():
        self.showImage(image_path) 
 
    def crop_dance(self):
-       self.image = self.image.crop((500, 0, 900, 600))
+       self.image = self.image.crop((500, 0, 900, 600))#complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -319,7 +316,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_left(self):
-       self.image = self.image.crop((0, 0, 600, 400))
+       self.image = self.image.crop((0, 0, 600, 400))#complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -327,7 +324,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_left2lp(self):
-       self.image = self.image.crop((0, 250, 900, 800))
+       self.image = self.image.crop((0, 250, 900, 800))#complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -335,7 +332,7 @@ class ImageProcessor():
        self.showImage(image_path)
 #|============================================================================================
    def crop_center2(self):
-       self.image = self.image.crop((0, 250, 900, 800))
+       self.image = self.image.crop((0, 250, 900, 800))#complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -343,7 +340,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_righttwo(self):
-       self.image = self.image.crop((250, 0, 600, 400))
+       self.image = self.image.crop((250, 0, 600, 400))#
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -351,7 +348,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_righttwo2(self):
-       self.image = self.image.crop((150, 200, 500, 300))
+       self.image = self.image.crop((150, 200, 500, 300))#work
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -359,7 +356,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_dance2(self):
-       self.image = self.image.crop((0, 250, 900, 800))
+       self.image = self.image.crop((0, 250, 900, 800))#work
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -367,7 +364,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_lefttwo(self):
-       self.image = self.image.crop((0, 250, 900, 800))
+       self.image = self.image.crop((0, 250, 900, 800))#work
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -375,7 +372,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_lefttwo2(self):
-       self.image = self.image.crop((0, 250, 900, 800))
+       self.image = self.image.crop((0, 250, 900, 800))#work
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -383,7 +380,7 @@ class ImageProcessor():
        self.showImage(image_path)
 
    def crop_zoom(self):
-       self.image = self.image.crop((0, 200, 600, 400))
+       self.image = self.image.crop((0, 200, 600, 400))#complete
        self.saveImage()
        image_path = os.path.join(
            workdir, self.save_dir, self.filename
@@ -436,19 +433,18 @@ btn_poi.clicked.connect(workimage.do_x)
 btn_lkj.clicked.connect(workimage.do_I)
 btn_tuy.clicked.connect(workimage.do_H)
 btn_sdf.clicked.connect(workimage.do_U)
-btn_rty.clicked.connect(workimage.crop_center)
-btn_ty.clicked.connect(workimage.crop_right)
-btn_po.clicked.connect(workimage.crop_right2)
-btn_op.clicked.connect(workimage.crop_dance)
-btn_gh.clicked.connect(workimage.crop_left)
-btn_jo.clicked.connect(workimage.crop_left2lp)
-btn_zo.clicked.connect(workimage.crop_zoom)
-btn_rty2.clicked.connect(workimage.crop_center2)
-btn_ty2.clicked.connect(workimage.crop_righttwo)
-btn_po2.clicked.connect(workimage.crop_righttwo2)
-btn_op2.clicked.connect(workimage.crop_dance2)
-btn_gh2.clicked.connect(workimage.crop_lefttwo)
-btn_jo2.clicked.connect(workimage.crop_lefttwo2)
-btn_dir2.clicked.connect(workimage.close_window)
+btn_rty.clicked.connect(workimage.crop_center)#======================================
+btn_ty.clicked.connect(workimage.crop_right)#=========================
+btn_po.clicked.connect(workimage.crop_right2)#===================================
+btn_op.clicked.connect(workimage.crop_dance)#===============================
+btn_gh.clicked.connect(workimage.crop_left)#======================================
+btn_jo.clicked.connect(workimage.crop_left2lp)#=========================================
+btn_zo.clicked.connect(workimage.crop_zoom)#===============================
+btn_rty2.clicked.connect(workimage.crop_center2)#=================================
+btn_ty2.clicked.connect(workimage.crop_righttwo)#=============================
+btn_po2.clicked.connect(workimage.crop_righttwo2)#===========================
+btn_op2.clicked.connect(workimage.crop_dance2)#========================
+btn_gh2.clicked.connect(workimage.crop_lefttwo)#==========================
+btn_jo2.clicked.connect(workimage.crop_lefttwo2)#============================
 
 app.exec()
