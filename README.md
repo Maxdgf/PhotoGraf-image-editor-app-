@@ -1,4 +1,4 @@
-ImageEditor "PhotoGraf" app project
+Фото редактор "PhotoGraf" пприложение
 
 This is my first python app project on pyqt5.
 Do not judge strictly!)
