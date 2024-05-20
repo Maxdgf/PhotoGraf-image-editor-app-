@@ -9,6 +9,11 @@ PhotoGraf can edit photos(png, jpg, bmp, jpeg, svg)
 
 To edit a photo, just select the folder with the photo. After editing, the photo is automatically saved to the "Modified Images" subfolder.
 
+![app ui](main/UIapp_demo.png)
+
+In this photo, the interface of my project with the very 3 buttons whose code was lost(
+
+
 Requirements:
 
 1) pqt5 library (pip install pyqt5)
