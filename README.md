@@ -13,7 +13,7 @@ PhotoGraf может редактировать фото с расширения
 Это фото интерфейса фоторедактора на котором присутствует те самые 3 кнопки код которых был утерян(
 
 Скачать программу:
-![ссылка](https://drive.google.com/drive/folders/11SeZYoolY-BCZPHDfieVTMQUigEXjlLI)
+![ссылка](https://drive.google.com/drive/my-drive)
 
 Требования:
 
