@@ -12,9 +12,11 @@ PhotoGraf может редактировать фото с расширения
 
 Это фото интерфейса фоторедактора на котором присутствует те самые 3 кнопки код которых был утерян(
 
+Скачать программу и ознакомиться с ней:
+![](https://drive.google.com/drive/my-drive)
 
 Требования:
 
-1) pqt5 library (pip install pyqt5)
+1) pyqt5 library (pip install pyqt5)
 2) pillow library (pip install pillow)
 3) tkinter library (pip install tkinter)->!не обязательно!
