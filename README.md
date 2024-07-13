@@ -1,21 +1,25 @@
-Фото редактор "PhotoGraf" приложение
+Photo editor "Photographf" application
 
-Это моё первое приложение написанное на python с использованием билиотеки pyqt5.
-Не судите строго!)
+This is my first application written in python using the pyqt5 library.
+Do not judge strictly!)
 
-Этот проект я писал уже давно. К сожалению была утеряна небольшая часть кода, которая управляла 3 кнопками для редактирования фото, но сам исполняемый exe файл остался.
-PhotoGraf может редактировать фото с расширениями(png, jpg, bmp, jpeg, svg)
+I've been writing this project for a long time. Unfortunately, a small part of the code that controlled the 3 buttons for editing photos was lost, but the executable exe file itself remained.
+PhotoGraf can edit photos with extensions (png, jpg, bmp, jpeg, svg)
 
-Чтобы отредактировать фото достаточно выбрать одну папку с фото и после редактирования фото автоматически сохраняется в подпапку "Modified images".
+To edit a photo, just select one folder with a photo and after editing the photo is automatically saved to the "Modified images" subfolder.
 
 ![app ui](UIapp_demo.png)
 
-Это фото интерфейса фоторедактора на котором присутствует те самые 3 кнопки код которых был утерян(
+This is a photo of the photo editor interface, which contains the very 3 buttons whose code was lost (
 
 
 
-Требования:
+Requirements:
+##
+    pip install pyqt5
+##
+    pip install pillow
+##
+    pip install tkinter
 
-1) pyqt5 library (pip install pyqt5)
-2) pillow library (pip install pillow)
-3) tkinter library (pip install tkinter)->!не обязательно!
+tkinter not obligatory
