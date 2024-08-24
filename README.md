@@ -14,7 +14,8 @@ This is a photo of the photo editor interface, which contains the very 3 buttons
 
 
 
-Requirements:
+<h3>Requirements:</h3>
+
 ##
     pip install pyqt5
 ##
